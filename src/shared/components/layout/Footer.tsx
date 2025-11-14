@@ -13,10 +13,6 @@ export function Footer() {
       label: t('quickAccess.home'),
     },
     {
-      href: '/projects',
-      label: t('quickAccess.projects'),
-    },
-    {
       href: '/about-us',
       label: t('quickAccess.aboutUs'),
     },
@@ -41,20 +37,6 @@ export function Footer() {
     {
       href: '/services/consulting',
       label: t('services.consulting.title'),
-    },
-  ];
-  const projects = [
-    {
-      href: '/projects',
-      label: 'RestaurantTM',
-    },
-    {
-      href: '/projects',
-      label: 'CarCareRo',
-    },
-    {
-      href: '/projects',
-      label: 'PaulPhoto',
     },
   ];
 
@@ -98,23 +80,6 @@ export function Footer() {
                   color='foreground'
                   className='block'>
                   {service.label}
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-        <div className='space-y-3'>
-          <h2 className='font-headline font-semibold'>{t('projects.title')}</h2>
-          <div className='space-y-2'>
-            {projects.map((project, index) => {
-              return (
-                <Link
-                  href={project.href as string & RouterConfig['href']}
-                  key={index}
-                  underline='hover'
-                  color='foreground'
-                  className='block'>
-                  {project.label}
                 </Link>
               );
             })}

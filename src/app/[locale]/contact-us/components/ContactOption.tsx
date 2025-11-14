@@ -11,17 +11,17 @@ export function ContactOption({
   icon: ReactNode;
 }) {
   return (
-    <div className='border-default-500 shadow-default-400 flex h-full w-full basis-0 items-center gap-8 rounded-2xl border p-4 shadow'>
+    <div className='shadow-default-500 flex w-full items-center gap-4 rounded-2xl p-4 shadow sm:gap-6'>
       <Chip
         size='md'
         radius='lg'
-        variant='bordered'
-        className='flex size-12 max-w-none min-w-auto items-center justify-center'>
+        variant='light'
+        className='flex size-12 shrink-0 items-center justify-center'>
         {icon}
       </Chip>
-      <div className='flex flex-col'>
-        <h3 className='font-headline font-semibold sm:text-lg xl:text-xl'>{title}</h3>
-        <p className='text-default-700'>{content}</p>
+      <div className='flex min-w-0 flex-col'>
+        <h3 className='font-headline font-semibold text-nowrap sm:text-lg'>{title}</h3>
+        <p className='text-default-700 text-sm break-all sm:text-base'>{content}</p>
       </div>
     </div>
   );

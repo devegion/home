@@ -37,40 +37,29 @@ export default async function ContactUsPage({ params }: PageProps<'/[locale]/con
   return (
     <Section
       isAnimated={false}
-      className='mb-32 flex min-h-[calc(100vh_-_80px)] items-center justify-center xl:mb-44 2xl:mb-64'>
-      <div className='flex flex-col items-center gap-16 pt-20 xl:pt-10 2xl:pt-0'>
-        <div className='grid w-full grid-cols-1 gap-16 xl:grid-cols-11'>
-          <div className='flex flex-col items-center justify-end gap-8 xl:col-span-5'>
-            <div className='flex max-h-min flex-col justify-between gap-2'>
-              <SectionHeading className='text-primary xl:text-start'>{t('title')}</SectionHeading>
-              <SectionDescription className='xl:text-start'>{t('description')}</SectionDescription>
-            </div>
-            <div className='hidden max-h-min w-full flex-col justify-end gap-8 xl:flex'>
-              <ContactOption
-                title={t('contactOptions.email')}
-                content='support@devegion.com'
-                icon={<Mail className='size-8' />}
-              />
-              <ContactOption
-                title={t('contactOptions.phone')}
-                content='+40 733 051 566'
-                icon={<Phone className='size-8' />}
-              />
-            </div>
-          </div>
-          <ContactForm className='border-default-500 shadow-default-400 h-full w-full rounded-3xl border p-3 shadow sm:p-6 xl:col-span-6' />
-          <div className='flex max-h-min w-full flex-col justify-end gap-8 xl:hidden'>
-            <ContactOption
-              title='Email Us'
-              content='support@devegion.com'
-              icon={<Mail className='size-8' />}
-            />
-            <ContactOption
-              title='Call Us'
-              content='+40 733 051 566'
-              icon={<Phone className='size-8' />}
-            />
-          </div>
+      className='mb-32 flex min-h-[calc(100vh_-_80px)] justify-center xl:mb-44 2xl:mb-64'>
+      <div className='flex w-full max-w-3xl flex-col items-center gap-12 pt-36 xl:pt-44 2xl:pt-56'>
+        {/* Header Section - Centered */}
+        <div className='flex flex-col items-center gap-3 text-center'>
+          <SectionHeading className='text-primary'>{t('title')}</SectionHeading>
+          <SectionDescription>{t('description')}</SectionDescription>
+        </div>
+
+        {/* Contact Form */}
+        <ContactForm />
+
+        {/* Contact Options - Centered Below Form */}
+        <div className='flex w-full flex-col gap-6 sm:flex-row sm:justify-center sm:gap-12'>
+          <ContactOption
+            title={t('contactOptions.email')}
+            content='support@devegion.com'
+            icon={<Mail className='size-8' />}
+          />
+          <ContactOption
+            title={t('contactOptions.phone')}
+            content='+40 733 051 566'
+            icon={<Phone className='size-8' />}
+          />
         </div>
       </div>
     </Section>

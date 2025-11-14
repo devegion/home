@@ -61,11 +61,11 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
             </div>
             <p className='text-default-700 max-w-2xl text-center'>{t('hero.description')}</p>
             <div className='flex flex-col items-center justify-center gap-6 sm:flex-row'>
-              <Button as={Link} href='/contact-us' size='lg' color='primary' radius='lg'>
-                {t('startProject')} <ArrowRight className='size-[1em]' />
-              </Button>
               <Button as={Link} href='/#projects' variant='faded' size='lg' radius='lg'>
                 {t('viewWork')}
+              </Button>
+              <Button as={Link} href='/contact-us' size='lg' color='primary' radius='lg'>
+                {t('startProject')} <ArrowRight className='size-[1em]' />
               </Button>
             </div>
           </div>
@@ -128,7 +128,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
                 color='primary'
                 size='lg'
                 radius='lg'>
-                {t('startProject')}
+                {t('contactUs')}
               </Button>
             </div>
           </div>
@@ -188,6 +188,20 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
               <FAQ />
             </div>
           </div>
+        </Section>
+        <Section className='shadow-primary-200 bg-primary flex max-w-5xl flex-col items-center gap-8 rounded-3xl p-16 shadow-lg'>
+          <SectionHeading className='text-2x text-background sm:text-3xl xl:text-4xl'>
+            {t('faq.finalHook.title')}
+          </SectionHeading>
+          <Button
+            as={Link}
+            href='/contact-us'
+            variant='faded'
+            color='primary'
+            size='lg'
+            radius='lg'>
+            {t('faq.finalHook.button')}
+          </Button>
         </Section>
       </div>
     </div>

@@ -47,7 +47,7 @@ export function Header() {
   const navItems = [
     {
       label: t('projects'),
-      href: '/projects',
+      href: '/#projects',
       subItems: [],
     },
     {
@@ -230,60 +230,58 @@ export function Header() {
       </NavbarContent>
 
       <NavbarMenu>
-        <>
-          {navItems.map((navItem, index) => {
-            return (
-              <NavbarMenuItem key={index}>
-                {navItem.href ?
-                  <Link
-                    onPress={() => {
-                      setIsMenuOpen(false);
-                    }}
-                    className='w-full'
-                    href={navItem.href as string & RouterConfig['href']}
-                    size='lg'>
-                    {navItem.label}
-                  </Link>
-                : <Accordion disableAnimation={true} className='px-0'>
-                    <AccordionItem
-                      classNames={{ trigger: 'py-0', title: 'text-large' }}
-                      title={navItem.label}>
-                      <div className='ml-2 flex w-full flex-col gap-2'>
-                        {navItem.subItems.map((subItem) => {
-                          return (
-                            <Link
-                              onPress={() => {
-                                setIsMenuOpen(false);
-                              }}
-                              href={subItem.href as string & RouterConfig['href']}
-                              key={subItem.label}>
-                              {subItem.label}
-                            </Link>
-                          );
-                        })}
-                      </div>
-                    </AccordionItem>
-                  </Accordion>
-                }
-              </NavbarMenuItem>
-            );
-          })}
-          <div className='flex w-full grow flex-col justify-end pb-8'>
-            <Button
-              onPress={() => {
-                setIsMenuOpen(false);
-              }}
-              disableRipple
-              as={Link}
-              className=''
-              color='primary'
-              href='/contact-us'
-              variant='shadow'
-              radius='lg'>
-              {t('callToAction')}
-            </Button>
-          </div>
-        </>
+        {navItems.map((navItem, index) => {
+          return (
+            <NavbarMenuItem key={index}>
+              {navItem.href ?
+                <Link
+                  onPress={() => {
+                    setIsMenuOpen(false);
+                  }}
+                  className='w-full'
+                  href={navItem.href as string & RouterConfig['href']}
+                  size='lg'>
+                  {navItem.label}
+                </Link>
+              : <Accordion disableAnimation={true} className='px-0'>
+                  <AccordionItem
+                    classNames={{ trigger: 'py-0', title: 'text-large' }}
+                    title={navItem.label}>
+                    <div className='ml-2 flex w-full flex-col gap-2'>
+                      {navItem.subItems.map((subItem) => {
+                        return (
+                          <Link
+                            onPress={() => {
+                              setIsMenuOpen(false);
+                            }}
+                            href={subItem.href as string & RouterConfig['href']}
+                            key={subItem.label}>
+                            {subItem.label}
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </AccordionItem>
+                </Accordion>
+              }
+            </NavbarMenuItem>
+          );
+        })}
+        <NavbarMenuItem className='w-full'>
+          <Button
+            onPress={() => {
+              setIsMenuOpen(false);
+            }}
+            disableRipple
+            as={Link}
+            className='mt-6 w-full'
+            color='primary'
+            href='/contact-us'
+            variant='shadow'
+            radius='lg'>
+            {t('callToAction')}
+          </Button>
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );

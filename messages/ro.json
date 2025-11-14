@@ -114,9 +114,14 @@
       "q6": {
         "title": "Cine deține codul și proprietatea intelectuală?",
         "answer": "Tu deții totul. Odată ce proiectul este finalizat, tot codul sursă, design-urile, documentația și drepturile de proprietate intelectuală sunt transferate către tine. Credem în transparență completă și proprietatea clientului."
+      },
+      "finalHook": {
+        "title": "Mai ai întrebări?",
+        "button": "Hai să vorbim"
       }
     },
     "startProject": "Începe un Proiect",
+    "contactUs": "Contactează-ne",
     "viewProjects": "Vezi toate Proiectele",
     "viewWork": "Vizualizează-ne munca",
     "discover": "Descoperă",
@@ -162,43 +167,53 @@
       "email": "Trimite-ne un email",
       "phone": "Dă-ne un telefon"
     },
-    "formErrors": {
-      "name": {
-        "min": "Numele trebuie să aibă cel puțin 3 caractere",
-        "max": "Numele trebuie să aibă mai puțin de 50 de caractere",
-        "generic": "Numele nu este valid"
+    "contactForm": {
+      "questions": {
+        "fromScratch": {
+          "title": "Vrei un proiect de la zero?",
+          "options": {
+            "yes": "Da, am doar ideea",
+            "no": "Nu, am deja ceva"
+          }
+        },
+        "projectSize": {
+          "title": "Ce proiect plănuiești să construiești?",
+          "options": {
+            "small": "Ceva Mic",
+            "complex": "Un Proiect Complex"
+          }
+        },
+        "timeline": {
+          "title": "În ce perioadă de timp ar trebui să fie gata proiectul?",
+          "options": {
+            "short": "Într-o perioadă scurtă (1-2 luni)",
+            "long": "Într-o perioadă lungă (6+ luni)"
+          }
+        },
+        "contactInfo": {
+          "title": "Informațiile Tale de Contact"
+        }
       },
-      "email": {
-        "invalid": "Vă rugăm să introduceți o adresă de email validă"
+      "formLabels": {
+        "email": "Email"
       },
-      "subject": {
-        "min": "Subiectul trebuie să aibă cel puțin 3 caractere",
-        "max": "Subiectul trebuie să aibă mai puțin de 50 de caractere",
-        "generic": "Subiectul nu este valid"
+      "formErrors": {
+        "email": {
+          "invalid": "Email-ul este invalid"
+        }
       },
-      "message": {
-        "min": "Mesajul trebuie să aibă cel puțin 10 caractere",
-        "max": "Mesajul trebuie să aibă mai puțin de 1000 de caractere",
-        "generic": "Mesajul nu este valid"
-      }
-    },
-    "formToast": {
-      "success": {
-        "title": "Mesajul a fost trimis cu succes.",
-        "description": "Te vom contacta în scurt timp."
+      "formToast": {
+        "success": {
+          "title": "Mesaj trimis cu succes!",
+          "description": "Revenim la tine în scurt timp."
+        },
+        "failure": {
+          "title": "Mesajul nu a putut fi trimis",
+          "description": "Te rugăm să încerci din nou mai târziu."
+        }
       },
-      "failure": {
-        "title": "Mesajul nu a putut fi trimis.",
-        "description": "Te rugăm să încerci din nou mai târziu."
-      }
-    },
-    "formLabels": {
-      "name": "Nume",
-      "email": "Email",
-      "subject": "Subiect",
-      "message": "Mesaj"
-    },
-    "sendMessage": "Trimite"
+      "sendMessage": "Trimite Mesaj"
+    }
   },
   "Services": {
     "WebDevelopmentPage": {

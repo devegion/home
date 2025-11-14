@@ -114,10 +114,15 @@
       "q6": {
         "title": "Who owns the code and intellectual property?",
         "answer": "You own everything. Once the project is completed, all source code, designs, documentation, and intellectual property rights are transferred to you. We believe in full transparency and client ownership."
+      },
+      "finalHook": {
+        "title": "Still got questions?",
+        "button": "Let's talk"
       }
     },
 
     "startProject": "Start a Project",
+    "contactUs": "Contact Us",
     "viewProjects": "View all Projects",
     "viewWork": "View our work",
     "discover": "Discover",
@@ -163,43 +168,53 @@
       "email": "Email Us",
       "phone": "Call Us"
     },
-    "formErrors": {
-      "name": {
-        "min": "Name must be at least 3 characters long",
-        "max": "Name must be less than 50 characters",
-        "generic": "Name is not valid"
+    "contactForm": {
+      "questions": {
+        "fromScratch": {
+          "title": "Do you want a project from scratch?",
+          "options": {
+            "yes": "Yes, I only have the idea",
+            "no": "No, I already have something"
+          }
+        },
+        "projectSize": {
+          "title": "What project are you planning on building?",
+          "options": {
+            "small": "Something Small",
+            "complex": "A Complex Project"
+          }
+        },
+        "timeline": {
+          "title": "In what time period should the project be done?",
+          "options": {
+            "short": "In a short time (1-2 months)",
+            "long": "In a long time (6+ months)"
+          }
+        },
+        "contactInfo": {
+          "title": "Your Contact Information"
+        }
       },
-      "email": {
-        "invalid": "Please enter a valid email address"
+      "formLabels": {
+        "email": "Email"
       },
-      "subject": {
-        "min": "Subject must be at least 3 characters long",
-        "max": "Subject must be less than 50 characters",
-        "generic": "Subject is not valid"
+      "formErrors": {
+        "email": {
+          "invalid": "Email is invalid"
+        }
       },
-      "message": {
-        "min": "Message must be at least 10 characters long",
-        "max": "Message must be less than 1000 characters",
-        "generic": "Message is not valid"
-      }
-    },
-    "formToast": {
-      "success": {
-        "title": "Message sent successfully.",
-        "description": "We will come back to you in a short time."
+      "formToast": {
+        "success": {
+          "title": "Message sent successfully!",
+          "description": "We will get back to you soon."
+        },
+        "failure": {
+          "title": "Failed to send message",
+          "description": "Please try again later."
+        }
       },
-      "failure": {
-        "title": "Message could not be sent.",
-        "description": "Please try again later."
-      }
-    },
-    "formLabels": {
-      "name": "Name",
-      "email": "Email",
-      "subject": "Subject",
-      "message": "Message"
-    },
-    "sendMessage": "Send Message"
+      "sendMessage": "Send Message"
+    }
   },
   "Services": {
     "WebDevelopmentPage": {
